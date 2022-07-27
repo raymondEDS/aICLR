@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r libraries}
+rm(list=ls())
+library(ggplot2)
+library(tidyr)
+library(predictrace)
+library(rethnicity)
+library(psych)
+library(dplyr)
+library(grf)
+library(rpart)
+library(glmnet)
+library(splines)
+library(lmtest)
+library(sandwich)
+library(ggplot2)
+library(tidyverse)
+library(tidymodels)
+library(fastDummies)
+library(xtable)
+library("gridExtra") 
+```
+```{r}
+setwd('~/Mirror/github/aICLR/')
+ICLR_author_profiles = read.csv("./data/authors/df_author_profile_email.csv")
+
+```
+
+```{r}
+df = ICLR_author_profiles %>% group_by(year,gender) %>%
+      dplyr::summarise(n = n()) %>%
+      mutate(freq = round(n  / sum(n ), 3))
+  
+
+
+graph2=ggplot(df, aes(x = year, y = n)) + 
+  geom_line(aes(color = gender, linetype = gender)) + 
+  scale_color_manual(values = c("darkred", "steelblue",'green','purple')) +
+  ggtitle("Number of Authors by Gender Identity from ICLR 2017 - 2019") +
+  scale_x_discrete(limit = c(2017, 2018, 2019)) +
+  geom_point()
+
+graph1 = ggplot(df, aes(x = year, y = freq)) + 
+  geom_line(aes(color = gender, linetype = gender)) + 
+  scale_color_manual(values = c("darkred", "steelblue",'green','purple')) +
+  ggtitle("Percent of Authors by Gender Identity from ICLR 2017 - 2019")+
+  scale_x_discrete(limit = c(2017, 2018, 2019)) + 
+  geom_point()
+
+test = grid.arrange(graph1, graph2,ncol=2)
+```
+
