@@ -108,8 +108,8 @@ graph1
 
 ```{r describe politiness}
 
-#hist(ICLR_all_review$polite_pred_score)
-#hist(ICLR_all_comment$polite_pred_score)
+hist(ICLR_all_review$polite_pred_score)
+hist(ICLR_all_comment$polite_pred_score)
 
 Review_politiness = ICLR_all_review %>% group_by(year) %>%
   dplyr::summarise(ave_polite = mean(polite_pred_score),sd_polite = sd(polite_pred_score))
@@ -136,4 +136,21 @@ ggplot(Comment_politiness, aes(x=year, y=ave_polite)) + geom_point() +
   ggtitle("Average Politiness Score of Comment by Year")
 ```
 
+```{r describe author location}
+#hist(ICLR_author_profiles$location)
+
+ICLR_author_location_freq = ICLR_author_profiles %>% group_by(location) %>%
+  dplyr::summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  slice(1:10)
+
+
+ICLR_author_location_freq
+
+ggplot(ICLR_author_location_freq, aes(x = location, y = n)) +
+  geom_bar(stat="identity") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  geom_text(aes(label=n), position=position_dodge(width=0.9), vjust=-0.25)
+
+```
 
