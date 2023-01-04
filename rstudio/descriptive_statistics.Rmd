@@ -1,0 +1,311 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r libraries}
+rm(list=ls())
+library(ggplot2)
+library(tidyr)
+library(psych)
+library(dplyr)
+library(grf)
+library(tidyverse)
+require(gridExtra)
+library(xtable)
+```
+```{r import csv}
+setwd('~/Mirror/github/aICLR/')
+ICLR_author_profiles = read.csv("./data/authors/df_author_profiles.csv")
+ICLR_author_profiles = ICLR_author_profiles %>% mutate_all(na_if,"")
+
+ICLR_submissions = read.csv("./data/submissions/df_submissions.csv")
+ICLR_submissions = ICLR_submissions %>% mutate_all(na_if,"")
+
+ICLR_all_notes = read.csv("./data/submissions/df_all_notes.csv")
+ICLR_all_notes = ICLR_all_notes %>% mutate_all(na_if,"")
+
+ICLR_rr_all_features = read.csv("./data/df_rr_all_features.csv")
+ICLR_rr_all_features = ICLR_rr_all_features %>% mutate_all(na_if,"")
+
+
+```
+```{r describe RR}
+ICLR_all_rr = ICLR_all_notes %>% filter (rr_flag ==1 )
+
+
+
+ICLR_all_review = ICLR_rr_all_features %>% filter (!is.na(review))
+
+ICLR_all_comment = ICLR_rr_all_features %>% filter (!is.na(comment))
+
+ICLR_all_decision_1718 = ICLR_all_notes %>% filter(!is.na(decision))
+ICLR_all_decision_19 = ICLR_all_notes %>% filter(meta_flag == 1)
+
+ICLR_all_decision_1718 %>% group_by(year,decision) %>%
+  dplyr::summarise(n = n())
+
+ICLR_all_decision_19 %>% group_by(year,recommendation) %>%
+  dplyr::summarise(n = n())
+
+xtable(ICLR_all_comment %>% group_by(year) %>%
+  dplyr::summarise(n = n()) )
+
+xtable(ICLR_all_review %>% group_by(year) %>%
+  dplyr::summarise(n = n()))
+
+xtable(ICLR_submissions %>% group_by(invitation) %>%
+  dplyr::summarise(n = n()) )
+
+```
+
+```{r describe authors}
+ICLR_author_profiles_2017 = ICLR_author_profiles %>% filter(year == 2017)
+ICLR_author_profiles_2018 = ICLR_author_profiles %>% filter(year == 2018)
+ICLR_author_profiles_2019 = ICLR_author_profiles %>% filter(year == 2019)
+
+
+author_profile_describe = describe(ICLR_author_profiles[c('email','year','gender',"location","institution", "X2017_position", "X2018_position", "X2019_position" )])[c('n')]
+
+author_profile_describe['percentage'] = author_profile_describe/8101
+xtable(author_profile_describe)
+test = describe(ICLR_author_profiles_2017[c('email','year','gender',"location","institution", "X2017_position", "X2018_position", "X2019_position" )])[c('n')]
+
+test['new'] = test/1307
+test
+describe(ICLR_author_profiles_2018[c('email','year','gender',"location","institution", "X2017_position", "X2018_position", "X2019_position" )])[c('n')]
+
+describe(ICLR_author_profiles_2019[c('email','year','gender',"location","institution", "X2017_position", "X2018_position", "X2019_position" )])[c('n')]
+
+
+ICLR_submissions["keywords"][ICLR_submissions["keywords"] == "[]"] <- NA
+describe(ICLR_submissions[c('id','keywords')])[c('n')]
+
+ICLR_submissions[c('keywords')[c('id','keywords')]]
+
+```
+```{r describe submissions}
+
+describe(ICLR_submissions)#[c("n")]
+
+```
+```{r describe submissions by year}
+ICLR_submissions %>% group_by(invitation) %>%
+      dplyr::summarise(n = n()) %>%
+      mutate(freq = round(n  / sum(n ), 3))
+```
+
+
+
+
+```{r plots gender}
+
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "m"] <- "Male"
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "M"] <- "Male"
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "male"] <- "Male"
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "female"] <- "Female"
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "Not Specified"] <- NA
+ICLR_author_profiles["gender"][ICLR_author_profiles["gender"] == "Unspecified"] <- NA
+
+df = ICLR_author_profiles %>% group_by(year,gender) %>%
+      dplyr::summarise(n = n()) %>%
+      mutate(freq = round(n  / sum(n ), 3))
+  
+
+
+graph2=ggplot(df, aes(x = year, y = n)) + 
+  geom_line(aes(color = gender, linetype = gender)) + 
+  #scale_color_manual(values = c("darkred", "steelblue",'green','purple')) +
+  ggtitle("Number of Authors by Gender Identity from ICLR 2017 - 2019") +
+  scale_x_discrete(limit = c(2017, 2018, 2019)) +
+  geom_point()
+
+graph1 = ggplot(df, aes(x = year, y = freq)) + 
+  geom_line(aes(color = gender, linetype = gender)) + 
+  #scale_color_manual(values = c("darkred", "steelblue",'green','purple')) +
+  ggtitle("Percent of Authors by Gender Identity from ICLR 2017 - 2019")+
+  scale_x_discrete(limit = c(2017, 2018, 2019)) + 
+  geom_point()
+grid.arrange(graph2, graph1, ncol=2)
+```
+
+```{r describe politiness}
+
+hist(ICLR_all_review$polite_pred_score)
+hist(ICLR_all_comment$polite_pred_score)
+
+Review_politiness = ICLR_all_review %>% group_by(year) %>%
+  dplyr::summarise(ave_polite = mean(polite_pred_score),sd_polite = sd(polite_pred_score))
+
+Comment_politiness = ICLR_all_comment %>% group_by(year) %>%
+  dplyr::summarise(ave_polite = mean(polite_pred_score),sd_polite = sd(polite_pred_score))
+
+
+ggplot(Review_politiness, aes(x=year, y=ave_polite)) + geom_point() +
+  geom_errorbar(aes(ymin=ave_polite-sd_polite, ymax=ave_polite+sd_polite), width=.2,
+              position=position_dodge(0.05)) +
+  scale_x_discrete(limit = c(2017, 2018, 2019)) +
+  ylim(0,1) +
+  geom_line() +
+  ggtitle("Average Politiness Score of Review by Year")
+
+
+ggplot(Comment_politiness, aes(x=year, y=ave_polite)) + geom_point() +
+  geom_errorbar(aes(ymin=ave_polite-sd_polite, ymax=ave_polite+sd_polite), width=.2,
+              position=position_dodge(0.05)) +
+  scale_x_discrete(limit = c(2017, 2018, 2019)) +
+  ylim(0,1) +
+  geom_line() +
+  ggtitle("Average Politiness Score of Comment by Year")
+```
+
+```{r describe author location}
+#hist(ICLR_author_profiles$location)
+
+ICLR_author_location_freq = ICLR_author_profiles %>% group_by(location) %>%
+  dplyr::summarise(n = n()) %>%
+  arrange(desc(n)) %>%
+  slice(1:10)
+
+
+ICLR_author_location_freq
+
+ggplot(ICLR_author_location_freq, aes(x = location, y = n)) +
+  geom_bar(stat="identity") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
+  geom_text(aes(label=n), position=position_dodge(width=0.9), vjust=-0.25)
+
+```
+
+
+```{r}
+test = ICLR_rr_all_features %>% group_by(forum) %>%
+  filter(!any(is.na(gender_percent))) %>%
+  dplyr::summarise(gender_percentage = mean(gender_percent)) 
+
+describe(ICLR_rr_all_features[c('id','gender_percent','last_author_gender')])[c('n')]
+```
+```{r describe submission level data}
+setwd('~/Mirror/github/aICLR/')
+ICLR_all_notes = read.csv("./data/submissions/df_all_notes.csv")
+ICLR_all_notes = ICLR_all_notes %>% mutate_all(na_if,"")
+
+describe(ICLR_submissions[c('id','gender_percent','last_author_gender','first_author_gender')])[c('n')]
+```
+
+
+```{r describe submission level data}
+ICLR_submissions_2017 = ICLR_submissions %>%
+  filter(invitation=="ICLR.cc/2017/conference/-/submission")
+
+ICLR_submissions_2018 = ICLR_submissions %>%
+  filter(invitation=='ICLR.cc/2018/Conference/-/Blind_Submission')
+
+ICLR_submissions_2019 = ICLR_submissions %>%
+  filter(invitation=='ICLR.cc/2019/Conference/-/Blind_Submission')
+
+describe(ICLR_submissions_2017[c('id','gender_percent','last_author_gender','first_author_gender','abstract','TL.DR','keywords')])[c('n')]
+describe(ICLR_submissions_2018[c('id','gender_percent','last_author_gender','first_author_gender','abstract','TL.DR','keywords')])[c('n')]
+describe(ICLR_submissions_2019[c('id','gender_percent','last_author_gender','first_author_gender','abstract','TL.DR','keywords')])[c('n')]
+```
+```{r}
+g1 = ggplot(ICLR_submissions_2017, aes(last_author_gender)) +
+  geom_bar() +
+  ggtitle("2017 Last Author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(ICLR_submissions_2018, aes(last_author_gender)) +
+  geom_bar() +
+  ggtitle("2018 Last Author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(ICLR_submissions_2019, aes(last_author_gender)) +
+  geom_bar() +
+  ggtitle("2019 Last Author Gender Representation") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+```
+```{r}
+g1 = ggplot(ICLR_submissions_2017, aes(first_author_gender)) +
+  geom_bar() +
+  ggtitle("2017 First Author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(ICLR_submissions_2018, aes(first_author_gender)) +
+  geom_bar() +
+  ggtitle("2018 First Author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(ICLR_submissions_2019, aes(first_author_gender)) +
+  geom_bar() +
+  ggtitle("2019 First Author Gender Representation") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+```
+```{r}
+g1 = ggplot(ICLR_submissions_2017, aes(gender_percent)) +
+  geom_histogram() +
+  ggtitle("2017 % author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+g2 = ggplot(ICLR_submissions_2018, aes(gender_percent)) +
+  geom_histogram() +
+  ggtitle("2018 % Author Gender Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(ICLR_submissions_2019, aes(gender_percent)) +
+  geom_histogram() +
+  ggtitle("2019 % Author Gender Representation") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+```
+```{r}
+g1 = ggplot(ICLR_submissions_2017, aes(all_male_authors)) +
+  geom_bar() +
+  ggtitle("2017 All male Authors Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(ICLR_submissions_2018, aes(all_male_authors)) +
+  geom_bar() +
+  ggtitle("2018 All male Authors Representation") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(ICLR_submissions_2019, aes(all_male_authors)) +
+  geom_bar() +
+  ggtitle("2019 All male Authors r Representation") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+```
+
+```{r}
+setwd('~/Mirror/github/aICLR/')
+df_repeat_author_profiles = read.csv("./data/authors/df_repeat_author_profiles.csv")
+df_repeat_author_profiles = df_repeat_author_profiles %>% mutate_all(na_if,"")
+
+
+describe(df_repeat_author_profiles[c('gender','location','institution','X2017_position','X2018_position','X2019_position','id')])[c('n')]
+```
+

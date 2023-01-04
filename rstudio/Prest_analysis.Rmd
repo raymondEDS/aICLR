@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+rm(list=ls())
+library(ggplot2)
+library(tidyr)
+library(psych)
+library(dplyr)
+library(grf)
+library(tidyverse)
+require(gridExtra)
+library(xtable)
+library(GGally)
+```
+
+```{r}
+setwd('~/Mirror/github/aICLR/')
+
+Df = read.csv("./rstudio/df_prestege.csv")
+
+DF_features = Df[c('AVG_rating',"conf_year", 'polite_prediction', 'AVG_confidence', 'AVG_len', 'MAX_CITE')]
+```
+```{r}
+lm_prest = lm(AVG_rating ~ conf_year + polite_prediction + AVG_confidence + AVG_len + MAX_CITE,data = Df)
+```
+```{r}
+summary(lm_prest)
+```
+
+```{r}
+ggcorr(DF_features,hjust = 0.5,vjust=.2, size = 3) + ggplot2::labs(title = "Pearson Correlation Matrix") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+```{r}
+DF_features_1718 = DF_features %>% filter(conf_year %in% c(2017,2018))
+```
+
+
+```{r}
+lm_prest_year = lm(AVG_rating ~ conf_year + MAX_CITE + conf_year*MAX_CITE,data = DF_features_1718)
+summary(lm_prest_year)
+```
+```{r}
+lm_prest_year = lm(polite_prediction ~ conf_year + MAX_CITE + conf_year*MAX_CITE,data = DF_features_1718)
+summary(lm_prest_year)
+```
+

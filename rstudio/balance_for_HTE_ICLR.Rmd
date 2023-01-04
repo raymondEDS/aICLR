@@ -1,0 +1,414 @@
+---
+title: "Assessing Balance In HTE ~ ICLR DB"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+```{r clean variables}
+rm(list=ls())
+```
+
+
+```{r Libraries}
+library(ggplot2)
+library(tidyr)
+library(psych)
+library(dplyr)
+library(grf)
+library(tidyverse)
+require(gridExtra)
+library(xtable)
+library(GGally)
+library(MASS)
+library(sandwich)
+```
+```{r functions from the tutorial}
+# Auxiliary function to computes adjusted p-values 
+# following the Romano-Wolf method.
+# For a reference, see http://ftp.iza.org/dp12845.pdf page 8
+#  t.orig: vector of t-statistics from original model
+#  t.boot: matrix of t-statistics from bootstrapped models
+romano_wolf_correction <- function(t.orig, t.boot) {
+  abs.t.orig <- abs(t.orig)
+  abs.t.boot <- abs(t.boot)
+  abs.t.sorted <- sort(abs.t.orig, decreasing = TRUE)
+
+  max.order <- order(abs.t.orig, decreasing = TRUE)
+  rev.order <- order(max.order)
+
+  M <- nrow(t.boot)
+  S <- ncol(t.boot)
+
+  p.adj <- rep(0, S)
+  p.adj[1] <- mean(apply(abs.t.boot, 1, max) > abs.t.sorted[1])
+  for (s in seq(2, S)) {
+    cur.index <- max.order[s:S]
+    p.init <- mean(apply(abs.t.boot[, cur.index, drop=FALSE], 1, max) > abs.t.sorted[s])
+    p.adj[s] <- max(p.init, p.adj[s-1])
+  }
+  p.adj[rev.order]
+}
+
+# Computes adjusted p-values for linear regression (lm) models.
+#    model: object of lm class (i.e., a linear reg model)
+#    indices: vector of integers for the coefficients that will be tested
+#    cov.type: type of standard error (to be passed to sandwich::vcovHC)
+#    num.boot: number of null bootstrap samples. Increase to stabilize across runs.
+# Note: results are probabilitistic and may change slightly at every run. 
+#
+# Adapted from the p_adjust from from the hdm package, written by Philipp Bach.
+# https://github.com/PhilippBach/hdm_prev/blob/master/R/p_adjust.R
+summary_rw_lm <- function(model, indices=NULL, cov.type="HC2", num.boot=10000) {
+
+  if (is.null(indices)) {
+    indices <- 1:nrow(coef(summary(model)))
+  }
+  # Grab the original t values.
+  summary <- coef(summary(model))[indices,,drop=FALSE]
+  t.orig <- summary[, "t value"]
+
+  # Null resampling.
+  # This is a trick to speed up bootstrapping linear models.
+  # Here, we don't really need to re-fit linear regressions, which would be a bit slow.
+  # We know that betahat ~ N(beta, Sigma), and we have an estimate Sigmahat.
+  # So we can approximate "null t-values" by
+  #  - Draw beta.boot ~ N(0, Sigma-hat) --- note the 0 here, this is what makes it a *null* t-value.
+  #  - Compute t.boot = beta.boot / sqrt(diag(Sigma.hat))
+  Sigma.hat <- vcovHC(model, type=cov.type)[indices, indices]
+  se.orig <- sqrt(diag(Sigma.hat))
+  num.coef <- length(se.orig)
+  beta.boot <- mvrnorm(n=num.boot, mu=rep(0, num.coef), Sigma=Sigma.hat)
+  t.boot <- sweep(beta.boot, 2, se.orig, "/")
+  p.adj <- romano_wolf_correction(t.orig, t.boot)
+
+  result <- cbind(summary[,c(1,2,4),drop=F], p.adj)
+  colnames(result) <- c('Estimate', 'Std. Error', 'Orig. p-value', 'Adj. p-value')
+  result
+}
+```
+```{r set WD read in data}
+setwd('~/Mirror/github/aICLR/')
+
+df_authors = read.csv("./data/database/outputs/df_authors.csv")
+df_prestige = read.csv("./data/database/outputs/df_prestige.csv")
+                      
+```
+```{r Balance US/Canada}
+
+Authors_2017 = df_authors %>% group_by(author_id) %>% 
+  filter(conf_year == 2017, author_no == 1, current_position_flag == 1)
+
+Authors_2018 = df_authors %>% group_by(author_id) %>% 
+  filter(conf_year == 2018, author_no == 1, current_position_flag == 1)
+
+Authors_2019 = df_authors %>% group_by(author_id) %>%
+  filter(conf_year == 2019, author_no == 1, current_position_flag == 1)
+
+
+g1 = ggplot(Authors_2017, aes(US_Canada)) +
+  geom_bar() +
+  ggtitle("2017 1st Author US Canada") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(Authors_2018, aes(US_Canada)) +
+  geom_bar() +
+  ggtitle("2018 1st Author US Canada") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(Authors_2019, aes(US_Canada)) +
+  geom_bar() +
+  ggtitle("2019 1st Author US Canada") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+
+```
+```{r Balance Gender}
+Authors_2017 = df_authors %>% filter(conf_year == 2017, author_no == 1, current_position_flag == 1)
+
+Authors_2018 = df_authors %>% filter(conf_year == 2018, author_no == 1, current_position_flag == 1)
+
+Authors_2019 = df_authors %>% filter(conf_year == 2019, author_no == 1, current_position_flag == 1)
+
+
+g1 = ggplot(Authors_2017, aes(gender)) +
+  geom_bar() +
+  ggtitle("2017 First Author Gender") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(Authors_2018, aes(gender)) +
+  geom_bar() +
+  ggtitle("2018 First Author Gender") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(Authors_2019, aes(gender)) +
+  geom_bar() +
+  ggtitle("2019 First Author Gender") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+
+grid.arrange(g1, g2, g3,ncol=2)
+```
+```{r Balance First Author Position}
+Authors_2017 = df_authors %>% filter(conf_year == 2017, author_no == 1, current_position_flag == 1)
+
+Authors_2018 = df_authors %>% filter(conf_year == 2018, author_no == 1, current_position_flag == 1)
+
+Authors_2019 = df_authors %>% filter(conf_year == 2019, author_no == 1, current_position_flag == 1)
+
+
+g1 = ggplot(Authors_2017, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2017 First Author Title") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(Authors_2018, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2018 First Author Title") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(Authors_2019, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2019 First Author Title") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+
+```
+
+
+
+```{r Balance Last Author Position}
+Authors_2017 = df_authors %>% group_by(submission_id) %>%
+  top_n(1, author_no) %>%
+  filter(conf_year == 2017, current_position_flag == 1)
+
+Authors_2018 = df_authors %>% group_by(submission_id) %>%
+  top_n(1, author_no) %>%
+  filter(conf_year == 2018, current_position_flag == 1)
+
+Authors_2019 = df_authors %>% 
+  group_by(submission_id) %>%
+  top_n(1, author_no) %>%  
+  filter(conf_year == 2019, current_position_flag == 1)
+
+
+g1 = ggplot(Authors_2017, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2017 Last Author Title") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(Authors_2018, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2018 Last Author Title") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(Authors_2019, aes(clean_position)) +
+  geom_bar() +
+  ggtitle("2019 Last Author Title") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+
+```
+```{r Data Cleaning Review Lenght Precentile Group}
+df_prestige = df_prestige %>% mutate(AVG_len_Ntile = ntile(AVG_len, 4))
+```
+
+```{r Balance Max Author Citation Precentile Group}
+df_prestige = df_prestige %>% mutate(MAX_CITE_Ntile = ntile(MAX_CITE, 5))
+df_prestige = df_prestige %>% mutate(MAX_CITE_scaled = scale(MAX_CITE))
+df_prestige_2017 = df_prestige  %>%
+  filter(conf_year ==2017)
+
+
+df_prestige_2018 = df_prestige %>% 
+  filter(conf_year ==2018)
+
+df_prestige_2019 = df_prestige %>%
+  filter(conf_year ==2019)
+
+g1 = ggplot(df_prestige_2017, aes(MAX_CITE_Ntile)) +
+  geom_bar() +
+  ggtitle("2017 Last Author Citation Precentile \n Group") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g2 = ggplot(df_prestige_2018, aes(MAX_CITE_Ntile)) +
+  geom_bar() +
+  ggtitle("2018 Last Author Citation Precentile \n Group") +
+  stat_count(geom = "text", 
+       aes(label = stat(count)),
+       position="stack", colour="black")
+
+g3 = ggplot(df_prestige_2019, aes(MAX_CITE_Ntile)) +
+  geom_bar() +
+  ggtitle("2019 Last Author Citation Precentile \n Group") +
+      stat_count(geom = "text", 
+             aes(label = stat(count)),
+             position="stack", colour="black")
+grid.arrange(g1, g2, g3,ncol=2)
+
+```
+```{r Data Cleaning Merge df_authors and df_prestige}
+features = c("author_no","conf_year.x","US_Canada","clean_position","gender","AVG_len_Ntile" , "AVG_confidence","polite_prediction","MAX_CITE_Ntile","AVG_rating" ,"MAX_CITE","AVG_CITE","MAX_CITE_scaled")
+df_combined = merge(df_authors, df_prestige,by.x = 'submission_id', by.y ='id') %>% filter(current_position_flag == 1)
+
+df_combined_limited_features = df_combined[features]
+
+df_authors %>% filter(author_no ==1 & current_position_flag==1) %>% group_by(conf_year) %>% summarize(n = n())
+
+ggcorr(df_combined_limited_features,hjust = 0.5,vjust=.2, size = 3) + ggplot2::labs(title = "Pearson Correlation Matrix") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+```{r Regression ~ Politiness - All Features Forward Step}
+df_combined_limited_features_first_author = df_combined_limited_features %>% filter(author_no == 1 & conf_year.x %in% c(2017,2018))
+
+# Fit the full model 
+full.model <- lm(polite_prediction ~., data = na.omit(df_combined_limited_features_first_author))
+step.model <- stepAIC(full.model, direction = "both", 
+                      trace = FALSE)
+summary(step.model)
+```
+```{r Regression ~ Politiness - All Features}
+full.model <- lm(polite_prediction ~., data = na.omit(df_combined_limited_features_first_author))
+summary(full.model)
+```
+```{r Regression ~ AVG_rating - All Features}
+full.model <- lm(AVG_rating ~. + conf_year.x*MAX_CITE_Ntile, data = na.omit(df_combined_limited_features_first_author[c("conf_year.x","US_Canada","clean_position","gender","AVG_len_Ntile" , "AVG_confidence","MAX_CITE_Ntile","AVG_rating")]))
+summary(full.model)
+```
+```{r ATE causal forest ~ Dependent AVG_rating}
+df_submissions_1718 = df_combined_limited_features_first_author %>% filter(conf_year.x %in% c(2017,2018))
+df_submissions_1718 = df_submissions_1718 %>% mutate(W = if_else(conf_year.x==2017,0,1))
+
+covariates = c("US_Canada","clean_position","gender","AVG_confidence","MAX_CITE_Ntile","AVG_confidence")
+#covariates =  c("AVG_len_Ntile" ,"MAX_CITE_Ntile","polite_prediction","AVG_confidence","polite_prediction","AVG_len_Ntile" )
+
+
+df_submissions_1718 = na.omit(df_submissions_1718)
+XX <- model.matrix(formula(paste0("~", paste0(covariates, collapse="+"))), data=df_submissions_1718)
+
+set.seed(1)
+
+forest <- causal_forest(
+              X=XX,  
+              W=df_submissions_1718[,"W"],
+              Y=df_submissions_1718[,"AVG_rating"]
+              #,num.trees = 100
+              )
+
+
+forest.ate <- average_treatment_effect(forest)
+
+
+forest.ate
+hist(forest$W.hat, main="Estimated propensity scores \n(causal forest with submission data)", xlim=c(-.1, 1.1))
+
+```
+```{r Balance df_submissions_1718}
+covariates = c("US_Canada","AVG_len_Ntile" ,"AVG_confidence","MAX_CITE_scaled","polite_prediction","gender","clean_position")
+covariates = c("US_Canada","clean_position","gender","AVG_confidence","MAX_CITE_scaled","AVG_confidence")
+# Here, adding covariates and their interactions, though there are many other possibilities.
+fmla <- formula(paste("~ 0 +", paste(apply(expand.grid(covariates, covariates), 1, function(x) paste0(x, collapse="*")), collapse="+")))
+
+# Using the propensity score estimated above
+#check to see if you are using ATE causal forest ICLR_analysis_Submission_1718
+e.hat <- forest$W.hat
+
+XX <- model.matrix(fmla, df_submissions_1718)
+W <- df_submissions_1718[,"W"]
+pp <- ncol(XX)
+
+# Unadjusted covariate means, variances and standardized abs mean differences
+means.treat <- apply(XX[W == 1,], 2, mean)
+means.ctrl <- apply(XX[W == 0,], 2, mean)
+abs.mean.diff <- abs(means.treat - means.ctrl)
+
+var.treat <- apply(XX[W == 1,], 2, var)
+var.ctrl <- apply(XX[W == 0,], 2, var)
+std <- sqrt(var.treat + var.ctrl)
+
+# Adjusted covariate means, variances and standardized abs mean differences
+means.treat.adj <- apply(XX*W/e.hat, 2, mean)
+means.ctrl.adj <- apply(XX*(1-W)/(1-e.hat), 2, mean)
+abs.mean.diff.adj <- abs(means.treat.adj - means.ctrl.adj)
+
+var.treat.adj <- apply(XX*W/e.hat, 2, var)
+var.ctrl.adj <- apply(XX*(1-W)/(1-e.hat), 2, var)
+std.adj <- sqrt(var.treat.adj + var.ctrl.adj)
+
+# Plotting
+#png(file = "balance_ICLR_analysis_Submission_1718_ATE.png")
+par(oma=c(0,4,0,0))
+plot(-2, xaxt="n", yaxt="n", xlab="", ylab="", xlim=c(-.01, 1.3), ylim=c(0, pp+1), main="Standardized absolute mean differences \n Submission Level Data 2017-2018")
+axis(side=1, at=c(-1, 0, 1), las=1)
+lines(abs.mean.diff / std, seq(1, pp), type="p", col="blue", pch=19)
+lines(abs.mean.diff.adj / std.adj, seq(1, pp), type="p", col="orange", pch=19)
+legend("topright", c("Unadjusted", "Adjusted"), col=c("blue", "orange"), pch=19)
+abline(v = seq(0, 1, by=.25), lty = 2, col = "grey", lwd=.5)
+abline(h = 1:pp,  lty = 2, col = "grey", lwd=.5)
+mtext(colnames(XX), side=2, cex=0.42, at=1:pp, padj=.4, adj=1, col="black", las=1, line=.3)
+abline(v = 0)
+```
+```{r HTE causal forest ~ AVG_rating}
+set.seed(1)
+group = "MAX_CITE_Ntile"
+
+covariates = c("US_Canada","clean_position","gender","AVG_confidence","MAX_CITE_Ntile")
+
+XX <- model.matrix(formula(paste0("~", paste0(covariates, collapse="+"))), data=df_submissions_1718)
+W=df_submissions_1718[,"W"]
+Y=df_submissions_1718[,"AVG_rating"]
+
+
+
+forest.tau <- causal_forest(XX, Y, W) 
+
+tau.hat <- predict(forest.tau)$predictions 
+m.hat <- forest.tau$Y.hat  # E[Y|X] estimates
+e.hat <- forest.tau$W.hat  # e(X) := E[W|X] estimates (or known quantity)
+tau.hat <- forest.tau$predictions  # tau(X) estimates
+  
+# Predicting mu.hat(X[i], 1) and mu.hat(X[i], 0) for obs in held-out sample
+# Note: to understand this, read equations 6-8 in this vignette
+# https://grf-labs.github.io/grf/articles/muhats.html
+mu.hat.0 <- m.hat - e.hat * tau.hat        # E[Y|X,W=0] = E[Y|X] - e(X)*tau(X)
+mu.hat.1 <- m.hat + (1 - e.hat) * tau.hat  # E[Y|X,W=1] = E[Y|X] + (1 - e(X))*tau(X)
+
+# Compute AIPW scores
+aipw.scores <- tau.hat + W / e.hat * (Y -  mu.hat.1) - (1 - W) / (1 - e.hat) * (Y -  mu.hat.0)
+
+# Estimate average treatment effect conditional on group membership
+fmla <- formula(paste0('aipw.scores ~ factor(', group, ')'))
+ols <- lm(fmla, data=transform(df_submissions_1718[covariates], aipw.scores=aipw.scores))
+
+summary_rw_lm(ols)
+hist(forest.tau$W.hat)
+
+test_calibration(forest.tau)
+
+```
+
