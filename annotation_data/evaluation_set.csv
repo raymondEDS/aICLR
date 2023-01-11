@@ -1,0 +1,301 @@
+unique_id,title_2017,title_2018
+a343ebed-943d-463d-b8e9-344e2ba32994,A Compositional Object-Based Approach to Learning Physical Dynamics,Learning Discrete Weights Using the Local Reparameterization Trick
+ca6cdd48-6ea2-43e4-887d-0977b175eb1d,A Compositional Object-Based Approach to Learning Physical Dynamics,Learn to Pay Attention
+d4107063-cce5-4447-a388-c3c4e8082c46,A Compositional Object-Based Approach to Learning Physical Dynamics,Relational Neural Expectation Maximization: Unsupervised Discovery of Objects and their Interactions
+c9f45709-14be-46da-9382-30b9f1d170fc,A Deep Learning Approach for Joint Video Frame and Reward Prediction in Atari Games,On the importance of single directions for generalization
+2be45593-3e8b-4782-a109-f77822dac56f,A Deep Learning Approach for Joint Video Frame and Reward Prediction in Atari Games,TreeQN and ATreeC: Differentiable Tree-Structured Models for Deep Reinforcement Learning
+00ed430b-c5d9-47e3-85db-34f03f499c79,A Deep Learning Approach for Joint Video Frame and Reward Prediction in Atari Games,A Scalable Laplace Approximation for Neural Networks
+87a6f30e-5993-4142-9dbc-cae5e58968ec,A Neural Stochastic Volatility Model,Multiscale Hidden Markov Models For Covariance Prediction
+531ecee8-62a9-49fd-ac4b-8b979639b1b3,A Neural Stochastic Volatility Model,Long-term Forecasting using Tensor-Train RNNs
+7b4e4861-d19a-4e34-acfa-c666af03dff3,A Neural Stochastic Volatility Model,Principled Hybrids of Generative and Discriminative Domain Adaptation
+5939a988-37ef-42aa-9f2e-369b5154e926,A hybrid network: Scattering and Convnet,Neumann Optimizer: A Practical Optimization Algorithm for Deep Neural Networks
+cb9b3109-8af1-4d1b-9bf2-985dbff3a6e9,A hybrid network: Scattering and Convnet,Emergent Communication through Negotiation
+ac6de085-da15-42d7-8f41-b71dd6182426,A hybrid network: Scattering and Convnet,Adaptive Dropout with Rademacher Complexity Regularization
+13b6563e-b676-4c89-ba5d-a169a43adaeb,Adversarial examples in the physical world,YellowFin and the Art of Momentum Tuning
+f1a4b891-3020-44c0-a16f-a8014fe3db79,Adversarial examples in the physical world,Intriguing Properties of Adversarial Examples
+8fd89a6d-68ca-4180-ac45-22e8215e0ba0,Adversarial examples in the physical world,Recurrent Auto-Encoder Model for Multidimensional Time Series Representation
+e83ee2cf-6c5e-4e7a-a35e-efef50414ae9,Alternating Direction Method of Multipliers for Sparse Convolutional Neural Networks,Efficient Sparse-Winograd Convolutional Neural Networks
+9896a766-c779-4d3c-b7c7-0f433320d073,Alternating Direction Method of Multipliers for Sparse Convolutional Neural Networks,Semi-supervised Outlier Detection using Generative And Adversary Framework
+dd44497c-907a-40da-97e7-e42f3bea1dbd,Alternating Direction Method of Multipliers for Sparse Convolutional Neural Networks,Long Term Memory Network for Combinatorial Optimization Problems
+c23c0991-08d6-42d6-989c-b7b53eadfbca,An Actor-Critic Algorithm for Sequence Prediction,MACHINE VS MACHINE: MINIMAX-OPTIMAL DEFENSE AGAINST ADVERSARIAL EXAMPLES
+09111eaf-6406-42e6-92f0-2e3b6d4f59e2,An Actor-Critic Algorithm for Sequence Prediction,Directing Generative Networks with Weighted Maximum Mean Discrepancy
+208296cf-4f39-480c-ba61-0581dd16ec15,An Actor-Critic Algorithm for Sequence Prediction,The Reactor: A fast and sample-efficient Actor-Critic agent for  Reinforcement Learning
+d190743c-1c72-48b0-a79f-bcfe4a82cdad,An Analysis of Feature Regularization for Low-shot Learning,End-to-End Abnormality Detection in Medical Imaging
+8196266d-6ea8-4c73-b3f6-fb1682810b36,An Analysis of Feature Regularization for Low-shot Learning,Enhancing Batch Normalized Convolutional Networks using Displaced Rectifier Linear Units: A Systematic Comparative Study
+998e7e2e-e589-4143-8821-43ad789cf992,An Analysis of Feature Regularization for Low-shot Learning,Discriminative k-shot learning using probabilistic models
+cdff773c-0d98-4953-9e25-566e772ee606,Batch Policy Gradient  Methods for  Improving Neural Conversation Models,Hierarchical Adversarially Learned Inference
+b43601d1-2ba6-4421-9a9f-9c880cbefc56,Batch Policy Gradient  Methods for  Improving Neural Conversation Models,Alpha-divergence bridges maximum likelihood and reinforcement learning in neural sequence generation
+9763f83f-4d35-41d3-92cc-6ddd8a0e4436,Batch Policy Gradient  Methods for  Improving Neural Conversation Models,THE EFFECTIVENESS OF A TWO-LAYER NEURAL NETWORK FOR RECOMMENDATIONS
+96b0ec9b-262a-4e86-aa22-91cad730cece,Beyond Fine Tuning: A Modular Approach to Learning on Small Data,Improving image generative models with human interactions
+a4a2cd74-ceea-41e7-9778-5afbd167f0f8,Beyond Fine Tuning: A Modular Approach to Learning on Small Data,CAYLEYNETS: SPECTRAL GRAPH CNNS WITH COMPLEX RATIONAL FILTERS
+cf91a491-4e13-4de9-adb0-3393c1094270,Beyond Fine Tuning: A Modular Approach to Learning on Small Data,Deep Learning is Robust to Massive Label Noise
+a7e6c592-3c92-4c6d-9ff0-e9e93577ec70,Central Moment Discrepancy (CMD) for Domain-Invariant Representation Learning,Stable Distribution Alignment Using the Dual of the Adversarial Distance
+bea6a8d6-9de5-4982-b48d-71aa0fb0fa35,Central Moment Discrepancy (CMD) for Domain-Invariant Representation Learning,Piecewise Linear Neural Networks verification: A comparative study
+6cae4b63-e522-4057-8980-9fccab0e0b91,Central Moment Discrepancy (CMD) for Domain-Invariant Representation Learning,Deep Gaussian Embedding of Graphs: Unsupervised Inductive Learning via Ranking
+edff18d2-65be-4acc-b651-1a3da7981d59,Chess Game Concepts Emerge under Weak Supervision: A Case Study of Tic-tac-toe,Self-Supervised Learning of Object Motion Through Adversarial Video Prediction
+3f808a40-334a-4c0e-a461-a2455bf1620d,Chess Game Concepts Emerge under Weak Supervision: A Case Study of Tic-tac-toe,Learning Robust Rewards with Adverserial Inverse Reinforcement Learning
+be7e3d6d-542f-49b2-8cb4-c9b2a30a6fcb,Chess Game Concepts Emerge under Weak Supervision: A Case Study of Tic-tac-toe,TD Learning with Constrained Gradients
+31ae356e-6397-4b95-8c6b-ed4d9a3d6bd1,Classless Association using Neural Networks,Enhancing the Transferability of Adversarial Examples with Noise Reduced Gradient
+af50e69e-4e61-44f7-a386-58e49ffcd9a5,Classless Association using Neural Networks,DropMax: Adaptive Stochastic Softmax
+f52a41d0-638d-40c5-9935-a82ec34bae4a,Classless Association using Neural Networks,Auto-Conditioned Recurrent Networks for Extended Complex Human Motion Synthesis
+0d4c8b2b-6dd0-4d3d-ac81-92cf62ffced6,Communicating Hierarchical Neural Controllers for Learning Zero-shot Task Generalization,Wavelet Pooling for Convolutional Neural Networks
+8fddd96f-18f1-4e55-82cc-f5081ba19682,Communicating Hierarchical Neural Controllers for Learning Zero-shot Task Generalization,Can Deep Reinforcement Learning solve Erdos-Selfridge-Spencer Games?
+53e5bbe5-875e-463a-a23b-dde712856dc4,Communicating Hierarchical Neural Controllers for Learning Zero-shot Task Generalization,Divide-and-Conquer Reinforcement Learning
+068be5d6-a370-4e00-a9f6-7b3e82420aec,Cortical-Inspired Open-Bigram Representation for Handwritten Word Recognition,Neural Networks for irregularly observed continuous-time Stochastic Processes
+a1cc1ae5-13be-4edd-a248-6fa5a53cce6d,Cortical-Inspired Open-Bigram Representation for Handwritten Word Recognition,LSH Softmax: Sub-Linear Learning and Inference of the Softmax Layer in Deep Architectures
+77fc7f46-c396-496f-a6c2-e4a50946417d,Cortical-Inspired Open-Bigram Representation for Handwritten Word Recognition,Discrete-Valued Neural Networks Using Variational Inference
+e586ed06-b3cf-46c2-be1e-5ef7afe3bfa1,Deep Biaffine Attention for Neural Dependency Parsing,Inducing Grammars with and for Neural Machine Translation
+cf75d779-da4f-4f00-83b5-3cd997fde86f,Deep Biaffine Attention for Neural Dependency Parsing,Online Hyper-Parameter Optimization
+068b9b95-7611-40fa-ae25-ddec16c61a73,Deep Biaffine Attention for Neural Dependency Parsing,Maintaining cooperation in complex social dilemmas using deep reinforcement learning
+20bee5eb-f957-4a2e-8ba8-0115a97afb3d,Deep Convolutional Neural Network Design Patterns,Deep Active Learning for Named Entity Recognition
+fb3d75d8-2210-4f09-9f09-2e5ccfaa230e,Deep Convolutional Neural Network Design Patterns,Deep learning mutation prediction enables early stage lung cancer detection in liquid biopsy
+7e8facd3-5fde-4af1-b782-07bfb7fb9689,Deep Convolutional Neural Network Design Patterns,Simple and efficient architecture search for Convolutional Neural Networks
+2edd4cab-3e82-419f-8f04-150c58534d35,Deep Error-Correcting Output Codes,Communication Algorithms via Deep Learning
+02bd6eab-369f-4f23-8bc7-72ab05ca996a,Deep Error-Correcting Output Codes,Online Learning Rate Adaptation with Hypergradient Descent
+91f3997d-d391-4c9a-a1de-5cc13eb6a734,Deep Error-Correcting Output Codes,Toward predictive machine learning for active vision
+291599a5-8504-451d-a553-8d8502d2f0f8,Deep Unsupervised Clustering with Gaussian Mixture Variational Autoencoders,PrivyNet: A Flexible Framework for Privacy-Preserving Deep Neural Network Training
+5f6be551-cd75-4978-ac6b-667b51ed2253,Deep Unsupervised Clustering with Gaussian Mixture Variational Autoencoders,Variational image compression with a scale hyperprior
+e640b2ab-0e09-4aee-be30-42e0a467e663,Deep Unsupervised Clustering with Gaussian Mixture Variational Autoencoders,Still not systematic after all these years: On the compositional skills of sequence-to-sequence recurrent networks
+0acb16e2-9268-4c8c-be5b-81e149e7707d,Diet Networks: Thin Parameters for Fat Genomics,Sensitivity and Generalization in Neural Networks: an Empirical Study
+658d0df2-7273-4b19-9ca1-9ae0b1084250,Diet Networks: Thin Parameters for Fat Genomics,ENRICHMENT OF FEATURES FOR CLASSIFICATION USING AN OPTIMIZED LINEAR/NON-LINEAR COMBINATION OF INPUT FEATURES
+23accf2a-261e-4bf1-b5f1-dd2f45e9a1af,Diet Networks: Thin Parameters for Fat Genomics,DEEP DENSITY NETWORKS AND UNCERTAINTY IN RECOMMENDER SYSTEMS
+ac67c35b-408d-4f17-96a4-10b6d9e643a3,Dynamic Neural Turing Machine with Continuous and Discrete Addressing Schemes,Data Augmentation Generative Adversarial Networks
+1db74e21-af7c-424f-b288-0fa1986c9003,Dynamic Neural Turing Machine with Continuous and Discrete Addressing Schemes,Bias-Variance Decomposition for Boltzmann Machines
+52673b1a-0820-4ce8-ab15-8f81d26003eb,Dynamic Neural Turing Machine with Continuous and Discrete Addressing Schemes,Rotational Unit of Memory 
+7f5229e2-7dc2-43a8-b217-ca873351067a,Dynamic Partition Models,Learning Sparse Latent Representations with the Deep Copula Information Bottleneck
+ebe0f0e9-e187-49e1-92a4-95b334824a4c,Dynamic Partition Models,Wasserstein Auto-Encoders
+e4df5da9-5ec2-44ac-910b-9f343d2152c5,Dynamic Partition Models,EXPLORING NEURAL ARCHITECTURE SEARCH FOR LANGUAGE TASKS
+1fa17042-77b5-48d7-ba61-37125e754a02,Emergent Predication Structure in Vector Representations of Neural Readers,ElimiNet: A Model for Eliminating Options for Reading Comprehension with Multiple Choice Questions
+c1617270-e374-480e-90d6-a0c43ebba865,Emergent Predication Structure in Vector Representations of Neural Readers,Deterministic Policy Imitation Gradient Algorithm
+33bc8dd0-82e5-44ba-a9ca-59b2da14cf52,Emergent Predication Structure in Vector Representations of Neural Readers,Maximum a Posteriori Policy Optimisation
+c4c6a371-61e3-4855-8458-1b1c831836ea,Episodic Exploration for Deep Deterministic Policies for StarCraft Micromanagement,Combining Model-based and Model-free RL via Multi-step Control Variates
+14e121d0-204d-43f6-84a3-268690084700,Episodic Exploration for Deep Deterministic Policies for StarCraft Micromanagement,Hierarchical and Interpretable Skill Acquisition in Multi-task Reinforcement Learning
+0b0a6072-bc7e-4add-8d72-be89546ed6bd,Episodic Exploration for Deep Deterministic Policies for StarCraft Micromanagement,Synthesizing realistic neural population activity patterns using Generative Adversarial Networks
+b06ba532-f5b7-4f3f-b198-ddab37524d74,Exploring the Application of Deep Learning for Supervised Learning Problems,The Cramer Distance as a Solution to Biased Wasserstein Gradients
+e8a8c9df-2244-4903-ad27-83c3ea8e5f7a,Exploring the Application of Deep Learning for Supervised Learning Problems,UNSUPERVISED SENTENCE EMBEDDING USING DOCUMENT STRUCTURE-BASED CONTEXT
+b5664dce-67c1-4109-b250-f68ba022f2f3,Exploring the Application of Deep Learning for Supervised Learning Problems,Accelerating Neural Architecture Search using Performance Prediction
+c33709c5-0ed6-4854-94ec-9ddbad7b12b7,Extensions and Limitations of the Neural GPU,DORA The Explorer: Directed Outreaching Reinforcement Action-Selection
+f2f14d46-7b89-45d2-90d6-a0b6f176e056,Extensions and Limitations of the Neural GPU,Learning to cluster in order to transfer across domains and tasks
+c643114b-228d-4dc4-9d84-c790a8c49f75,Extensions and Limitations of the Neural GPU,Combining Symbolic Expressions and Black-box Function Evaluations in Neural Programs
+cfd5d397-4db7-4e8b-94c3-f295426fc4b8,Fast Chirplet Transform to Enhance CNN Machine Listening - Validation on Animal calls and Speech,Large Scale Optimal Transport and Mapping Estimation
+af1203d3-ae9d-4624-a745-13fad5b2f646,Fast Chirplet Transform to Enhance CNN Machine Listening - Validation on Animal calls and Speech,How do deep convolutional neural networks learn from raw audio waveforms?
+87cc6d76-3d0b-47a7-97a3-edd1e6550314,Fast Chirplet Transform to Enhance CNN Machine Listening - Validation on Animal calls and Speech,The Cramer Distance as a Solution to Biased Wasserstein Gradients
+460de9f4-8dce-4bb2-9137-fd47d7fbf666,Frustratingly Short Attention Spans in Neural Language Modeling,Efficiently applying attention to sequential data with the Recurrent Discounted Attention unit
+542a079a-45fc-422b-9d01-9854ab1afd30,Frustratingly Short Attention Spans in Neural Language Modeling,Discrete-Valued Neural Networks Using Variational Inference
+050bd80d-a09b-49f6-bd48-ce6db92c47f0,Frustratingly Short Attention Spans in Neural Language Modeling,Graph Partition Neural Networks for Semi-Supervised Classification
+d6c367de-18b1-4822-94b7-c7fc752fff8b,Generalizable Features From Unsupervised Learning,Towards Provable Control for Unknown Linear Dynamical Systems
+474df6f0-2406-46aa-a4dd-12c84207cf03,Generalizable Features From Unsupervised Learning,Multimodal Sentiment Analysis To Explore the Structure of Emotions
+7dcc2932-043a-4dfb-bdf9-002ae433dbfa,Generalizable Features From Unsupervised Learning,Relational Neural Expectation Maximization: Unsupervised Discovery of Objects and their Interactions
+934a34f6-697d-4a8b-b87c-4bd5e8612462,Hadamard Product for Low-rank Bilinear Pooling,COLD FUSION: TRAINING SEQ2SEQ MODELS TOGETHER WITH LANGUAGE MODELS
+b2467a46-ea2e-4fa0-9ff0-8f31155a046b,Hadamard Product for Low-rank Bilinear Pooling,Tensor Contraction & Regression Networks
+10dd0bd1-7f20-482e-b0f8-5e1b4c7c588a,Hadamard Product for Low-rank Bilinear Pooling,Efficiently applying attention to sequential data with the Recurrent Discounted Attention unit
+3770fa7a-61ad-43be-b09d-d9ee4c8a044b,Hierarchical Multiscale Recurrent Neural Networks,Preliminary theoretical troubleshooting in Variational Autoencoder
+76f47996-8e4b-44b2-8ba8-a8b3d7d47453,Hierarchical Multiscale Recurrent Neural Networks,Building Generalizable Agents with a Realistic and Rich 3D Environment
+e5c44d55-9e9d-447a-84d1-f81a9a28ca07,Hierarchical Multiscale Recurrent Neural Networks,Efficiently applying attention to sequential data with the Recurrent Discounted Attention unit
+fd8d60fe-edc7-47f2-a924-2399c852ea65,Improved Architectures for Computer Go,Maintaining cooperation in complex social dilemmas using deep reinforcement learning
+f57d4e4e-f629-41c0-a4e6-c38bf05c81ba,Improved Architectures for Computer Go,Learning to Optimize Neural Nets
+240fb90b-fec3-44e4-819a-bd9b6d936488,Improved Architectures for Computer Go,Can Deep Reinforcement Learning solve Erdos-Selfridge-Spencer Games?
+472714fe-d60a-4db5-9b31-49990181b604,Improving Invariance and Equivariance Properties of Convolutional Neural Networks,Style Memory: Making a Classifier Network Generative
+f671d49c-f0f7-4b08-881c-85f607fe8f13,Improving Invariance and Equivariance Properties of Convolutional Neural Networks,GradNorm: Gradient Normalization for Adaptive Loss Balancing in Deep Multitask Networks
+8d562a1b-4e89-46ef-80f1-bf4341b6a035,Improving Invariance and Equivariance Properties of Convolutional Neural Networks,Byte-Level Recursive Convolutional Auto-Encoder for Text
+8fbc0451-96f3-42c8-862c-6d2b4e242e58,Improving Policy Gradient by Exploring Under-appreciated Rewards,Maximum a Posteriori Policy Optimisation
+8d3fcbba-7eab-418a-ad69-1f1d75237665,Improving Policy Gradient by Exploring Under-appreciated Rewards,Recurrent Auto-Encoder Model for Multidimensional Time Series Representation
+1a8d5aaa-4381-43dc-bd24-c39dba65b26f,Improving Policy Gradient by Exploring Under-appreciated Rewards,Towards Neural Phrase-based Machine Translation
+c04da0a5-51d9-4b2f-acb8-fbebe5325783,Incremental Sequence Learning,NOVEL AND EFFECTIVE PARALLEL MIX-GENERATOR GENERATIVE ADVERSARIAL NETWORKS
+0aa0d21d-b7fe-4c9a-afb1-ffd54d25ec7b,Incremental Sequence Learning,Towards a Testable Notion of Generalization for Generative Adversarial Networks
+f0ad5f5e-ed01-45bb-9fd7-bd11b27a2fe3,Incremental Sequence Learning,Variational Continual Learning
+329daf7b-aedb-4d2a-a7b8-a65ea3bad164,Introspection:Accelerating Neural Network Training By Learning Weight Evolution,Discovering the mechanics of hidden neurons
+75c11ea9-4a33-4af9-a25c-c6979b0d0dc2,Introspection:Accelerating Neural Network Training By Learning Weight Evolution,Learning Sparse Structured Ensembles with SG-MCMC and Network Pruning
+496e0831-17e5-4255-bcd5-6b5e049a313d,Introspection:Accelerating Neural Network Training By Learning Weight Evolution,Latent forward model for Real-time Strategy game planning with incomplete information
+e2419785-2fed-423b-8e67-d54bb56169dc,Investigating Different Context Types and Representations for Learning Word Embeddings,UNSUPERVISED SENTENCE EMBEDDING USING DOCUMENT STRUCTURE-BASED CONTEXT
+27990daa-d49c-4285-b345-f58946c59216,Investigating Different Context Types and Representations for Learning Word Embeddings,On the Information Bottleneck Theory of Deep Learning
+8c3dc32a-6869-4e4a-afc9-02201c67b35d,Investigating Different Context Types and Representations for Learning Word Embeddings,Enhance Word Representation for Out-of-Vocabulary on Ubuntu Dialogue Corpus
+afdfb95b-9ca8-41d9-b2ea-a37adbfbe3ea,Investigating Recurrence and Eligibility Traces in Deep Q-Networks,Mixed Precision Training of Convolutional Neural Networks using Integer Operations
+3654b7eb-b99f-49c6-adb9-dc5fab5bd644,Investigating Recurrence and Eligibility Traces in Deep Q-Networks,STRUCTURED ALIGNMENT NETWORKS
+a6603233-4577-4cc5-aea4-3724df6d94c7,Investigating Recurrence and Eligibility Traces in Deep Q-Networks,Distributed Prioritized Experience Replay
+742a993d-6c6f-4844-8636-3a818098debc,Iterative Refinement for Machine Translation,Faster Distributed Synchronous SGD with Weak Synchronization
+58b07f19-cf71-47a1-b087-dfec0a6c06d7,Iterative Refinement for Machine Translation,Prediction Under Uncertainty with Error Encoding Networks
+b97c77b7-aaeb-4f08-9b9a-5ce08f66b0a7,Iterative Refinement for Machine Translation,Synthetic and Natural Noise Both Break Neural Machine Translation
+26a6640f-f19c-4b2f-971e-61011b73d1d4,LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation,IVE-GAN: Invariant Encoding Generative Adversarial Networks
+bc597887-7425-4dce-87b8-f8d432042aef,LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation,Unleashing the Potential of CNNs for Interpretable Few-Shot Learning
+2f7652fc-6318-410a-9a78-44daf189ec87,LR-GAN: Layered Recursive Generative Adversarial Networks for Image Generation,Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
+75308dfa-98de-46eb-9324-7ca78f4b650f,LSTM-Based System-Call Language Modeling and Ensemble Method for Host-Based Intrusion Detection,Benefits of Depth for Long-Term Memory of Recurrent Networks
+d51379ac-8c5a-44a0-bbb6-5f270ed46cc8,LSTM-Based System-Call Language Modeling and Ensemble Method for Host-Based Intrusion Detection,Clipping Free Attacks Against Neural Networks
+dbfe8e75-c453-4846-bac1-5ecdd7774878,LSTM-Based System-Call Language Modeling and Ensemble Method for Host-Based Intrusion Detection,Multiple Source Domain Adaptation with Adversarial Learning
+016234ef-e6bb-4551-9abb-1ed5d518592e,Learning Features of Music From Scratch,On the difference between building and extracting patterns: a causal analysis of deep generative models.
+eb1dd723-fa78-4ffe-a2e9-9533ad14cb10,Learning Features of Music From Scratch,Synthesizing Robust Adversarial Examples
+288fda0d-9865-440c-bdea-b26defbd0f35,Learning Features of Music From Scratch,WSNet: Learning Compact and Efficient Networks with Weight Sampling
+d912ef05-d3e7-497c-9fa0-0018442af3dc,Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?,Unsupervised Learning of Goal Spaces for Intrinsically Motivated Goal Exploration
+0016ec33-e296-4e86-88fd-2d1a199b99fe,Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?,Siamese Survival Analysis with Competing Risks
+8b31d5ec-50a0-4b5b-88fe-fa7fdce29791,Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?,Dense Recurrent Neural Network with Attention Gate
+7d399b4e-54a2-498c-9813-748a15978d7c,Learning Recurrent Representations for Hierarchical Behavior Modeling,Semantically Decomposing the Latent Spaces of Generative Adversarial Networks
+738fca96-e47d-458d-8404-ec86f096abda,Learning Recurrent Representations for Hierarchical Behavior Modeling,BinaryFlex: On-the-Fly Kernel Generation in Binary Convolutional Networks
+f0898580-9c55-4e59-b0a2-9119b18ef10c,Learning Recurrent Representations for Hierarchical Behavior Modeling,Efficiently applying attention to sequential data with the Recurrent Discounted Attention unit
+1eeb3e35-935d-4caf-bf65-c382ed2686ae,Learning Word-Like Units from Joint Audio-Visual Analylsis,Deep Function Machines: Generalized Neural Networks for Topological Layer Expression
+b0ff281d-5263-4ada-99b6-411e7c288460,Learning Word-Like Units from Joint Audio-Visual Analylsis,Memory-based Parameter Adaptation
+4a82b102-1a8e-4326-9505-cdaf0ef9c34e,Learning Word-Like Units from Joint Audio-Visual Analylsis,Memory Augmented Control Networks
+e684355b-fd94-4010-812f-2fb2685a5928,Learning to Compose Words into Sentences with Reinforcement Learning,Iterative Deep Compression : Compressing Deep Networks for Classification and Semantic Segmentation
+2b248b03-3093-4763-acdd-6725c0a8abe4,Learning to Compose Words into Sentences with Reinforcement Learning,Jointly Learning Sentence Embeddings and Syntax with Unsupervised Tree-LSTMs
+7f829b3c-1628-4d47-bdc6-f0b974a1a542,Learning to Compose Words into Sentences with Reinforcement Learning,The Manifold Assumption and Defenses Against Adversarial Perturbations
+0d2c3b11-fd69-4ae2-a29a-9c634b7fcedb,Learning to Generate Samples from Noise through Infusion Training,Deep Bayesian Bandits Showdown:  An Empirical Comparison of Bayesian Deep Networks for Thompson Sampling
+f467821e-353f-47ab-9ca2-d030935f17fd,Learning to Generate Samples from Noise through Infusion Training,Generalizing Hamiltonian Monte Carlo with Neural Networks
+8985ee3d-e18b-4c22-813b-fc195722ca51,Learning to Generate Samples from Noise through Infusion Training,Acquiring Target Stacking Skills by Goal-Parameterized Deep Reinforcement Learning
+dc522a8c-d4d7-4189-9e8b-e1608b854146,Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning,Eigenoption Discovery through the Deep Successor Representation
+e2a32f56-831d-4a91-a44d-a35a4debf48a,Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning,Learning Independent Causal Mechanisms
+8b230d91-6c8a-483b-93df-8e9b664b2d9b,Learning to Repeat: Fine Grained Action Repetition for Deep Reinforcement Learning,Building effective deep neural networks one feature at a time
+bb91262a-3343-43da-87f4-2bba07e89efe,Learning to superoptimize programs,Reinforcement Learning from Imperfect Demonstrations
+f978d040-7eeb-4ed0-bc4f-e457b1634852,Learning to superoptimize programs,Code Synthesis with Priority Queue Training
+6c7cde7c-1199-43c8-8a24-801949d46401,Learning to superoptimize programs,Discrete Autoencoders for Sequence Models
+3eb7d372-9ba9-4446-aad2-ef215adbba60,Lossy Image Compression with Compressive Autoencoders,DEEP DENSITY NETWORKS AND UNCERTAINTY IN RECOMMENDER SYSTEMS
+33480b1b-812e-4b64-9fb9-94c39f6e72e8,Lossy Image Compression with Compressive Autoencoders,TRL: Discriminative Hints for Scalable Reverse Curriculum Learning
+a39d5215-7a72-465e-be92-8ced1fa72345,Lossy Image Compression with Compressive Autoencoders,Training Autoencoders by Alternating Minimization
+7133dbfc-2e2e-4898-8389-8aec5a9b7e97,Making Stochastic Neural Networks from Deterministic Ones,Deep Temporal Clustering: Fully unsupervised learning of time-domain features
+09a24e8e-0b70-413c-903f-992107d7306b,Making Stochastic Neural Networks from Deterministic Ones,Residual Connections Encourage Iterative Inference
+2e1bff3c-b802-47ff-8066-0a21a422282c,Making Stochastic Neural Networks from Deterministic Ones,A DIRT-T Approach to Unsupervised Domain Adaptation
+540c659e-4fde-4001-b552-8afb7f14f0c2,Multi-task learning with deep model based reinforcement learning,On the Use of Word Embeddings Alone to Represent Natural Language Sequences
+f4fc2200-06a4-4df7-be54-69dd54af9e31,Multi-task learning with deep model based reinforcement learning,Learning Sparse Neural Networks through L_0 Regularization
+1f681f79-e1a5-46c4-a344-db998aeb3bcb,Multi-task learning with deep model based reinforcement learning,TD or not TD: Analyzing the Role of Temporal Differencing in Deep Reinforcement Learning
+e2e88783-6283-4075-97ba-12accd60aa5c,Multi-view Recurrent Neural Acoustic Word Embeddings,Unsupervised Machine Translation Using Monolingual Corpora Only
+94ac06d8-9246-458c-8f8b-7d26fc3b712c,Multi-view Recurrent Neural Acoustic Word Embeddings,3C-GAN: AN CONDITION-CONTEXT-COMPOSITE GENERATIVE ADVERSARIAL NETWORKS FOR GENERATING IMAGES SEPARATELY
+97278504-fb2e-4d36-96bb-da173bb29781,Multi-view Recurrent Neural Acoustic Word Embeddings,Viterbi-based Pruning for Sparse Matrix with Fixed and High Index Compression Ratio
+82fe77e6-2e1f-4785-9ab5-5a747b0242a4,Multiagent System for Layer Free Network,Machine Learning by Two-Dimensional Hierarchical Tensor Networks: A Quantum Information Theoretic Perspective on Deep Architectures
+9c52a478-192c-40da-9ebd-f70c844eb61a,Multiagent System for Layer Free Network,FigureQA: An Annotated Figure Dataset for Visual Reasoning
+c75f1774-8c7a-435d-891a-076363115c6f,Multiagent System for Layer Free Network,Detecting Statistical Interactions from Neural Network Weights
+a755023f-7be9-4969-9de4-9efaada8009c,Neural Code Completion,Dynamic Neural Program Embeddings for Program Repair
+4896601d-fc3a-4d94-930c-8f738e950ea0,Neural Code Completion,Synthetic and Natural Noise Both Break Neural Machine Translation
+1faefbbc-205d-4cff-bf8b-09f016e52189,Neural Code Completion,Learning to Represent Programs with Graphs
+ae1543d0-c918-4cb4-994a-69eb40d9c380,Neural Functional Programming,TCAV: Relative concept importance testing with Linear Concept Activation Vectors
+155f2b31-d714-4119-a9e0-72ae7233ca53,Neural Functional Programming,What is image captioning made of?
+26c44d41-2505-4fa5-966e-eb2a194ac711,Neural Functional Programming,Learning what to learn in a neural program
+d9a64ec0-983b-4f1b-9780-0051f36ac50c,New Learning Approach By Genetic Algorithm In A Convolutional Neural Network For Pattern Recognition,Policy Optimization by Genetic Distillation 
+21fa55b0-2c2f-455c-b54f-cb002168f7d0,New Learning Approach By Genetic Algorithm In A Convolutional Neural Network For Pattern Recognition,Gradient Estimators for Implicit Models
+8334437d-46c0-4268-be73-759339151147,New Learning Approach By Genetic Algorithm In A Convolutional Neural Network For Pattern Recognition,"Learning to Select: Problem, Solution, and Applications"
+d4ab655b-6307-4031-8f4a-fa8e60238648,Nonparametrically Learning Activation Functions in Deep Neural Nets,Proximal Backpropagation
+91b5c96e-b37c-4fda-8b49-66b1f603e7bf,Nonparametrically Learning Activation Functions in Deep Neural Nets,Learning to search with MCTSnets
+c91abe55-1ec4-4d1e-a494-55ede8e4bedc,Nonparametrically Learning Activation Functions in Deep Neural Nets,Sparse Regularized Deep Neural Networks For Efficient Embedded Learning
+6af5a22c-746d-4b3c-bf89-56384bd973d5,Optimal Binary Autoencoding with Pairwise Correlations,The Information-Autoencoding Family: A Lagrangian Perspective on Latent Variable Generative Modeling
+6998b139-9162-48fa-9826-076bb9aef152,Optimal Binary Autoencoding with Pairwise Correlations,A Deep Predictive Coding Network for Learning Latent Representations
+055bbbea-09d6-44c6-ae1d-00a92e522e76,Optimal Binary Autoencoding with Pairwise Correlations,Inference Suboptimality in Variational Autoencoders
+98446690-4453-4212-8855-41a19627be1c,Optimization as a Model for Few-Shot Learning,Style Memory: Making a Classifier Network Generative
+0c8ff6c5-5fcb-4b6c-baa5-70859f5dae09,Optimization as a Model for Few-Shot Learning,Dependent Bidirectional RNN with Extended-long Short-term Memory
+22adc179-c0f2-40d4-9757-55b254b11d19,Optimization as a Model for Few-Shot Learning,GENERATIVE LOW-SHOT NETWORK EXPANSION
+309e5ef2-55bf-403e-b1ce-1bcf45ded76d,Out-of-class novelty generation: an experimental foundation,GENERATIVE LOW-SHOT NETWORK EXPANSION
+0adac989-d8f3-4462-8462-6b4a08ef5aec,Out-of-class novelty generation: an experimental foundation,N2N learning: Network to Network Compression via Policy Gradient Reinforcement Learning
+a18cd92d-fcbd-4907-a713-291b3388c869,Out-of-class novelty generation: an experimental foundation,Unbiased scalable softmax optimization
+d62822bc-d4e3-4999-abe6-1ff37fa3dd07,Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer,Faster Distributed Synchronous SGD with Weak Synchronization
+f33efba6-2b33-4de1-9f58-6c9ef2f49bfb,Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer,UNSUPERVISED SENTENCE EMBEDDING USING DOCUMENT STRUCTURE-BASED CONTEXT
+61d09380-73eb-4f4c-afcc-159c839c8800,Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer,"Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients"
+8a7d685a-f3fb-4c7c-a79d-064cfe3a17af,Pedestrian Detection Based On Fast R-CNN and Batch Normalization ,Three factors influencing minima in SGD
+b87fb522-a7df-429c-a84a-c601c57e3de0,Pedestrian Detection Based On Fast R-CNN and Batch Normalization ,Learning to diagnose from scratch by exploiting dependencies among labels
+9aecf0a8-317b-432a-a024-07b88b3bc367,Pedestrian Detection Based On Fast R-CNN and Batch Normalization ,Efficient Sparse-Winograd Convolutional Neural Networks
+fe905ca6-e3ae-4e84-934c-17f3f6201d74,Pointer Sentinel Mixture Models,Regularizing and Optimizing LSTM Language Models
+581f152e-dd12-4913-b62e-90a1c1134ede,Pointer Sentinel Mixture Models,Auto-Encoding Sequential Monte Carlo
+d3b27f0d-5f01-4490-87e2-3f06ae542bb7,Pointer Sentinel Mixture Models,Some Considerations on Learning to Explore via Meta-Reinforcement Learning
+1d9879c5-1277-41b1-b148-8fa5104c107f,Prototypical Networks for Few-shot Learning,Optimal transport maps for distribution preserving operations on latent spaces of Generative Models
+f077dbec-f022-477b-a651-9da62cb676a7,Prototypical Networks for Few-shot Learning,Meta-Learning for Semi-Supervised Few-Shot Classification
+ef71ff11-23f5-4a89-a94b-cdfa3575caaa,Prototypical Networks for Few-shot Learning,Lifelong Learning with Dynamically Expandable Networks
+fed2eb8f-0007-4fec-9498-ad5324c9d16a,Pruning Filters for Efficient ConvNets,Classification and Disease Localization in Histopathology Using Only Global Labels: A Weakly-Supervised Approach
+3a6f689c-5c6d-4f80-a442-adef757ad954,Pruning Filters for Efficient ConvNets,Not-So-CLEVR: Visual Relations Strain Feedforward Neural Networks
+1cd135d2-eef8-46a0-96e8-dde9662a982f,Pruning Filters for Efficient ConvNets,Sparse-Complementary Convolution for Efficient Model Utilization on CNNs
+dd070a21-68b6-41a2-a5e6-d236588d5d4f,ReasoNet: Learning to Stop Reading in Machine Comprehension,FAST READING COMPREHENSION WITH CONVNETS
+b639e15f-ddd5-4a0c-871a-40364176d000,ReasoNet: Learning to Stop Reading in Machine Comprehension,Statestream: A toolbox to explore layerwise-parallel deep neural networks
+19fd0ee7-c822-451f-9fee-7ce5e5ba9c5a,ReasoNet: Learning to Stop Reading in Machine Comprehension,Learning to diagnose from scratch by exploiting dependencies among labels
+498f8f3a-e87c-4b40-826e-0508aebecb0f,Reasoning with Memory Augmented Neural Networks for Language Comprehension,"Don't Decay the Learning Rate, Increase the Batch Size"
+6918d40a-83c2-403e-9626-0e042923b7b6,Reasoning with Memory Augmented Neural Networks for Language Comprehension,FAST READING COMPREHENSION WITH CONVNETS
+adbfd0ca-0181-4a34-9e7c-447263ec2146,Reasoning with Memory Augmented Neural Networks for Language Comprehension,Adversarial Learning for Semi-Supervised Semantic Segmentation
+36e7f6c7-3bad-4049-8cdc-ee1c6f771faf,Recurrent Normalization Propagation,Overcoming the vanishing gradient problem in plain recurrent networks
+c2f3b174-d4d8-4f80-8bd5-833db1b711c9,Recurrent Normalization Propagation,Network Signatures from Image Representation of Adjacency Matrices: Deep/Transfer Learning for Subgraph Classification
+5c6a552c-5fd3-4305-854f-1930d4178dcd,Recurrent Normalization Propagation,THE EFFECTIVENESS OF A TWO-LAYER NEURAL NETWORK FOR RECOMMENDATIONS
+856127bc-2b6a-483e-8073-cfd4a57e6f48,RenderGAN: Generating Realistic Labeled Data,Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models
+31711cd4-c210-4bf5-875f-df37c40c1da3,RenderGAN: Generating Realistic Labeled Data,Image Quality Assessment Techniques Improve Training and Evaluation of Energy-Based Generative Adversarial Networks
+84f1aee4-daa9-479b-8753-6733a3694d57,RenderGAN: Generating Realistic Labeled Data,"Progressive Growing of GANs for Improved Quality, Stability, and Variation"
+c2074f6a-40d2-4bb1-8c53-756a64d0ed15,Revisiting Classifier Two-Sample Tests,Large-scale Cloze Test Dataset Designed by Teachers
+a49ff021-9c84-4403-823e-2f914c72d920,Revisiting Classifier Two-Sample Tests,Gaussian Prototypical Networks for Few-Shot Learning on Omniglot
+89bb1f94-bfe2-47b9-89ea-59b650825eaa,Revisiting Classifier Two-Sample Tests,The Cramer Distance as a Solution to Biased Wasserstein Gradients
+3c13ab3f-2c94-4ed7-a366-7549c6a25d60,Revisiting Denoising Auto-Encoders,Deep Learning for Physical Processes: Incorporating Prior Scientific Knowledge
+71e8d312-2885-477b-8f56-12e8fd75322f,Revisiting Denoising Auto-Encoders,Feature Map Variational Auto-Encoders
+31370aee-99c7-4dba-aa80-59162a733eaf,Revisiting Denoising Auto-Encoders,Learning to Teach
+f12ab748-144e-4d29-9ce3-71fbcceb4b12,Revisiting Distributed Synchronous SGD,Compressing Word Embeddings via Deep Compositional Code Learning
+4de342d0-9b08-43f6-8b00-aacb260335f8,Revisiting Distributed Synchronous SGD,On the Discrimination-Generalization Tradeoff in GANs
+49303b75-05a0-4916-b052-0ef6429a3b93,Revisiting Distributed Synchronous SGD,Large scale distributed neural network training through online distillation
+7dd02974-6c38-4fc1-84dc-e27ab6685853,Rule Mining in Feature Space,The Information-Autoencoding Family: A Lagrangian Perspective on Latent Variable Generative Modeling
+ddf860c1-24d2-4932-9dac-129612c68c72,Rule Mining in Feature Space,Hyperedge2vec: Distributed Representations for Hyperedges
+33a15225-39f9-444d-810d-e55447b7f590,Rule Mining in Feature Space,Learning a neural response metric for retinal prosthesis
+eb756930-aef2-4c45-b037-b665d0cafff4,SGDR: Stochastic Gradient Descent with Warm Restarts,Neumann Optimizer: A Practical Optimization Algorithm for Deep Neural Networks
+98a329e2-2d1f-4afe-a15a-4356c74f33da,SGDR: Stochastic Gradient Descent with Warm Restarts,Bit-Regularized Optimization of Neural Nets
+50186f0e-cd73-405d-a2b6-ae791e583590,SGDR: Stochastic Gradient Descent with Warm Restarts,Weighted Transformer Network for Machine Translation
+204a6322-6a0b-41d4-97af-cd5835dee621,Sampling Generative Networks,The Information-Autoencoding Family: A Lagrangian Perspective on Latent Variable Generative Modeling
+5eee92d1-c42e-4ff8-b5d9-6211e69d53cb,Sampling Generative Networks,Multi-level Residual Networks from Dynamical Systems View
+8b1b10bd-a704-4de4-8a3a-171219011455,Sampling Generative Networks,Skip Connections Eliminate Singularities
+561e3e84-f108-4693-b887-7b1b1ea5f6e0,Semi-Supervised Detection of Extreme Weather Events in Large Climate Datasets,GANITE: Estimation of Individualized Treatment Effects using Generative Adversarial Nets
+e0871922-ac48-4666-a82d-df1b2d97a54b,Semi-Supervised Detection of Extreme Weather Events in Large Climate Datasets,Long-term Forecasting using Tensor-Train RNNs
+7ae2fd1c-603d-4ca0-ac1d-5506502417e8,Semi-Supervised Detection of Extreme Weather Events in Large Climate Datasets,Some Considerations on Learning to Explore via Meta-Reinforcement Learning
+b3d0c99a-1c99-4428-a6de-d9d19a42781b,Semi-Supervised Learning with Context-Conditional Generative Adversarial Networks,Synthesizing Robust Adversarial Examples
+5e73c427-bdfa-4820-b4f9-9f09ee04a439,Semi-Supervised Learning with Context-Conditional Generative Adversarial Networks,"Learning to Select: Problem, Solution, and Applications"
+bfde20a9-6252-4f4c-b2ea-1001eec60c98,Semi-Supervised Learning with Context-Conditional Generative Adversarial Networks,"Model Specialization for Inference Via End-to-End Distillation, Pruning, and Cascades"
+5e5d410c-af14-4c89-ba85-f76e16b0796a,Sequence generation with a physiologically plausible model of handwriting and Recurrent Mixture Density Networks,Contextual memory bandit for pro-active dialog engagement
+78af918b-be1c-4573-b21a-5d1f4000b902,Sequence generation with a physiologically plausible model of handwriting and Recurrent Mixture Density Networks,Fraternal Dropout
+5a9c00b9-ae90-4456-ab0c-473eafe0fa89,Sequence generation with a physiologically plausible model of handwriting and Recurrent Mixture Density Networks,A Goal-oriented Neural Conversation Model by Self-Play
+ad75399a-3183-41aa-9e25-ebd5b1953e9a,Shift Aggregate Extract Networks,Towards Deep Learning Models Resistant to Adversarial Attacks
+f6159fbe-c405-4859-84b3-29c32de00add,Shift Aggregate Extract Networks,ANALYSIS ON GRADIENT PROPAGATION IN BATCH NORMALIZED RESIDUAL NETWORKS
+85ab0a92-283d-4b19-bb1d-741142a0df78,Shift Aggregate Extract Networks,Feat2Vec:  Dense Vector Representation for Data with Arbitrary Features
+15a0e99a-e375-428c-975f-9217aa88fddb,Sigma Delta Quantized Networks,Compact Encoding of Words for Efficient Character-level Convolutional Neural Networks Text Classification
+2334c873-b004-40ca-917c-d12566b0cd36,Sigma Delta Quantized Networks,Neural Networks for irregularly observed continuous-time Stochastic Processes
+880b0405-0cb4-45d2-a8bf-8e03f2a91528,Sigma Delta Quantized Networks,Baseline-corrected space-by-time non-negative matrix factorization for decoding single trial population spike trains
+2aaa73fe-7ade-4bb9-9421-b29a97c7236c,Skip-graph: Learning graph embeddings with an encoder-decoder model,Contextual Explanation Networks
+9829ce98-d18a-4aa7-9c84-9933424b1e9c,Skip-graph: Learning graph embeddings with an encoder-decoder model,FastGCN: Fast Learning with Graph Convolutional Networks via Importance Sampling
+26a5bb96-ec78-4e2c-944d-b4b7bd69e3dc,Skip-graph: Learning graph embeddings with an encoder-decoder model,SHADE: SHAnnon DEcay Information-Based Regularization for Deep Learning
+d5e32685-7e37-4c78-aab3-b96a9512ab6b,SoftTarget Regularization: An Effective Technique to Reduce Over-Fitting in Neural Networks,Critical Percolation as a Framework to Analyze the Training of Deep Networks
+7234a11b-c87c-4c21-8f67-e177668b1693,SoftTarget Regularization: An Effective Technique to Reduce Over-Fitting in Neural Networks,ShakeDrop regularization
+de60c14d-9b17-47e5-afe0-86f32d739acf,SoftTarget Regularization: An Effective Technique to Reduce Over-Fitting in Neural Networks,Towards Effective GANs for Data Distributions with Diverse Modes
+98ce7dbe-7583-43fe-93b3-211e0b6295ee,Tensorial Mixture Models,Explaining the Mistakes of Neural Networks with Latent Sympathetic Examples
+8cebd760-1efe-43cf-8f1f-56a95cb49d66,Tensorial Mixture Models,Feature Map Variational Auto-Encoders
+1c22587d-f7b9-4cf2-929b-317740e3ec73,Tensorial Mixture Models,Forced Apart: Discovering Disentangled Representations Without Exhaustive Labels
+28378f02-af9f-4cd8-bf04-067099d99841,The Power of Sparsity in Convolutional Neural Networks,Sparse-Complementary Convolution for Efficient Model Utilization on CNNs
+33d1b837-42ac-4077-8171-2eccf06f9740,The Power of Sparsity in Convolutional Neural Networks,Benefits of Depth for Long-Term Memory of Recurrent Networks
+d84073b2-4eba-4bca-947a-1774fb8e33be,The Power of Sparsity in Convolutional Neural Networks,Combination of Supervised and Reinforcement Learning For Vision-Based Autonomous Control
+feb930a0-35e1-4626-9f1a-1a43ee8c8350,The Predictron: End-To-End Learning and Planning,Long Term Memory Network for Combinatorial Optimization Problems
+6d6bbe10-7276-4469-908d-55e6f4b1b12b,The Predictron: End-To-End Learning and Planning,Value Propagation Networks
+52a5f8d6-119d-4298-aabd-64d01e669b5e,The Predictron: End-To-End Learning and Planning,The Kanerva Machine: A Generative Distributed Memory
+0a518cc6-9404-4844-a057-c8a653790a6b,Towards Deep Interpretability (MUS-ROVER II): Learning Hierarchical Representations of Tonal Music,Variational Inference of Disentangled Latent Concepts from Unlabeled Observations
+d8a740a1-c9a5-4eda-8618-8b69a8c78a0e,Towards Deep Interpretability (MUS-ROVER II): Learning Hierarchical Representations of Tonal Music,SCAN: Learning Hierarchical Compositional Visual Concepts
+ace3b0d8-8084-4516-9028-7becfa7a6be9,Towards Deep Interpretability (MUS-ROVER II): Learning Hierarchical Representations of Tonal Music,Spherical CNNs
+11f287f5-ce59-4ac8-9a66-09313678f8bc,Towards an automatic Turing test: Learning to evaluate dialogue responses,Graph2Seq: Scalable Learning Dynamics for Graphs
+478f534e-8011-4316-b61a-c5ce86046585,Towards an automatic Turing test: Learning to evaluate dialogue responses,On the Expressive Power of Overlapping Architectures of Deep Learning
+3770c4f4-078b-404d-b575-9143c54b4367,Towards an automatic Turing test: Learning to evaluate dialogue responses,The Reactor: A fast and sample-efficient Actor-Critic agent for  Reinforcement Learning
+b4aa1355-cd9b-43c9-9b76-16ea0de732e6,Trained Ternary Quantization,Understanding and Exploiting the Low-Rank Structure of Deep Networks
+be914c90-1de3-408e-a10c-c7e4be635e72,Trained Ternary Quantization,Training wide residual networks for deployment using a single bit for each weight
+1cb7e541-d6ef-4b07-b710-04d70110d250,Trained Ternary Quantization,Deep Learning and Quantum Entanglement: Fundamental Connections with Implications to Network Design
+e23d4b47-89de-48cd-8e70-31900afea238,Training Long Short-Term Memory With Sparsified Stochastic Gradient Descent,Deep Rewiring: Training very sparse deep networks
+f844a77b-c365-4091-b9db-eac97f33d2b3,Training Long Short-Term Memory With Sparsified Stochastic Gradient Descent,Joint autoencoders: a flexible meta-learning framework
+4d2b09b6-6296-4e72-86fc-87b9426cde14,Training Long Short-Term Memory With Sparsified Stochastic Gradient Descent,Efficient Sparse-Winograd Convolutional Neural Networks
+796ebfc1-f55b-4e5b-99fa-ae4ea9c4cfb6,TreNet: Hybrid Neural Networks for Learning the Local Trend in Time Series,Nearest Neighbour Radial Basis Function Solvers for Deep Neural Networks
+74af796d-57a7-4a00-a76f-33ca1800587a,TreNet: Hybrid Neural Networks for Learning the Local Trend in Time Series,Consequentialist conditional cooperation in social dilemmas with imperfect information
+5e4a20de-19eb-4a32-9c67-1fbd6391f261,TreNet: Hybrid Neural Networks for Learning the Local Trend in Time Series,Deep Temporal Clustering: Fully unsupervised learning of time-domain features
+d1760473-5bf6-40d3-ac00-73b1c2d71be8,Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling,LSH Softmax: Sub-Linear Learning and Inference of the Softmax Layer in Deep Architectures
+addae014-8ac1-4c10-9624-2a7633d735cf,Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling,Initialization matters: Orthogonal Predictive State Recurrent Neural Networks
+db2f9103-dfc3-4ed4-8c7b-a649f41f2ce2,Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling,Neural-Guided Deductive Search for Real-Time Program Synthesis from Examples
+763578d6-289f-4a21-bfd3-317b88f3769f,Universality in halting time,On the Convergence of Adam and Beyond
+793393e8-cd1b-4c30-b478-ed7f4d836800,Universality in halting time,SGD Learns Over-parameterized Networks that Provably Generalize on Linearly Separable Data
+e653f13d-5960-4c30-a50a-c141595fa6c9,Universality in halting time,Gradients explode - Deep Networks are shallow - ResNet explained
+24a339a7-29db-4468-8113-a9a20e37e007,Unsupervised Cross-Domain Image Generation,Reinforcement and Imitation Learning for Diverse Visuomotor Skills
+350eb4d8-7014-49c7-ba58-bc2440dd4023,Unsupervised Cross-Domain Image Generation,XGAN: Unsupervised Image-to-Image Translation for many-to-many Mappings
+81ff31ea-4d69-424c-886f-d44c7582417b,Unsupervised Cross-Domain Image Generation,Learning Gaussian Policies from Smoothed Action Value Functions
+69e431b6-e66b-47bc-beb7-9209414a1fe0,Unsupervised Deep Learning of State Representation Using Robotic Priors ,Spherical CNNs
+ad1689d7-beef-4198-add0-e781f16228a9,Unsupervised Deep Learning of State Representation Using Robotic Priors ,Unsupervised Cipher Cracking Using Discrete GANs
+bf8a9b75-9784-416f-b7bb-d5d8aeb17cd4,Unsupervised Deep Learning of State Representation Using Robotic Priors ,Memory Architectures in Recurrent Neural Network Language Models
+f94017c1-9bc4-454c-8177-10eff2797964,Variational Lossy Autoencoder,DOUBLY STOCHASTIC ADVERSARIAL AUTOENCODER
+6a62cd97-2f84-414a-87b4-198790a27a07,Variational Lossy Autoencoder,Learning Independent Features with Adversarial Nets for Non-linear ICA
+846c5814-125d-4ff0-a8ec-437aa3f74c22,Variational Lossy Autoencoder,Towards Interpretable Chit-chat: Open Domain Dialogue Generation with Dialogue Acts
+2aa4483d-a8e8-4e13-b22e-7c01ab347571,Vocabulary Selection Strategies for Neural Machine Translation,The Implicit Bias of Gradient Descent on Separable Data
+08130868-3da1-438d-a3da-fa6b8bb2b927,Vocabulary Selection Strategies for Neural Machine Translation,Interpretable and Pedagogical Examples
+1375e5ff-918e-4c16-9247-fb6cc47d30ca,Vocabulary Selection Strategies for Neural Machine Translation,Unsupervised Neural Machine Translation
+98e21da8-17e9-4337-b26d-e8755617d2a2,Wav2Letter: an End-to-End ConvNet-based Speech Recognition System,An efficient framework for learning sentence representations
+36118785-69df-4dd1-875b-603948856d9a,Wav2Letter: an End-to-End ConvNet-based Speech Recognition System,Maximum a Posteriori Policy Optimisation
+c21c77e6-e28c-4ccc-b61a-cd81e014abf8,Wav2Letter: an End-to-End ConvNet-based Speech Recognition System,Trace norm regularization and faster inference for embedded speech recognition RNNs
+f0413fe8-22d6-41ce-a434-b585ebe480de,Zoneout: Regularizing RNNs by Randomly Preserving Hidden Activations,Learning to Infer
+b252e3a9-d0e8-487a-917d-2f66cd943b0a,Zoneout: Regularizing RNNs by Randomly Preserving Hidden Activations,Efficiently applying attention to sequential data with the Recurrent Discounted Attention unit
+0e5bceeb-7dfe-4b1b-874d-18ba22eaa988,Zoneout: Regularizing RNNs by Randomly Preserving Hidden Activations,Automatically Inferring Data Quality for Spatiotemporal Forecasting
+bc5378e2-117e-4c70-93fc-fa793885c9c7,b-GAN: Unified Framework of Generative Adversarial Networks,Multi-Task Learning by Deep Collaboration and Application in Facial Landmark Detection
+27ddb4a1-2325-43f2-a7ef-a034e123ad6d,b-GAN: Unified Framework of Generative Adversarial Networks,Multi-Task Learning for Document Ranking and Query Suggestion
+93bb13ea-d434-4a33-a3b3-673dd9d6a489,b-GAN: Unified Framework of Generative Adversarial Networks,Deep Lipschitz networks and Dudley GANs
